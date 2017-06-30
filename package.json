@@ -1,0 +1,8 @@
+{
+  "name": "weather-station-view",
+  "version": "1.0.0",
+  "description": "A web interface for weather station service",
+  "main": "index.js",
+  "author": "Chun Yu",
+  "license": "MIT"
+}
