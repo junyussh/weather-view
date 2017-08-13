@@ -4,5 +4,9 @@
   "description": "A web interface for weather station service",
   "main": "index.js",
   "author": "Chun Yu",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "susy": "2.2.12"
+  }
 }
