@@ -7,6 +7,8 @@
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.9.1",
-    "susy": "2.2.12"
+    "susy": "2.2.12",
+    "gulp-connect": "5.0.0",
+    "gulp-sass": "3.1.0"
   }
 }
