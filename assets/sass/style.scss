@@ -1,8 +1,9 @@
 @import url(https://fonts.cat.net/css?family=Lato|Noto+Sans);
 body {
-	font-family: Raleway, Lato, Noto Sans, serif;
-	color: #fff;
-	font-size: 14px;
+	//font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
+	font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+	color: rgba(38, 50, 56, 0.88);
+	font-size: 1em;
 }
 h1, h2, h3 {
     letter-spacing: 0.1em;
@@ -10,6 +11,12 @@ h1, h2, h3 {
 h1 {
 	font-size: 2.25em;
 	font-weight: 700;
+}
+h2 {
+	font-size: 2em;
+}
+p {
+	font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
 }
 .header {
 	display: flex;
@@ -30,6 +37,7 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	flex-direction: row;
 }
 .one {
 	background: url(https://unsplash.com/photos/2Jl8gtDwQPY/download?force=true) center center no-repeat fixed;
@@ -41,8 +49,24 @@ h1 {
 .inner {
 	width: 100%;
 	background: rgba(220, 220, 220, 0.75);
-	height: 65%;
+	padding: 2em 4em 0.1em 4em;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	position: relative;
+	.content {
+		max-width: 48em;
+	}
+	.image {
+		top: 0;
+		left: 0;
+		width: 40%;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		img {
+			display: block;
+		}
+	}
 }
