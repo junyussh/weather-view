@@ -1,72 +1,112 @@
 @import url(https://fonts.cat.net/css?family=Lato|Noto+Sans);
 body {
-	//font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
-	font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
-	color: rgba(38, 50, 56, 0.88);
-	font-size: 1em;
+    //font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    color: rgba(38, 50, 56, 0.88);
+    font-size: 1em;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     letter-spacing: 0.1em;
 }
+
 h1 {
-	font-size: 2.25em;
-	font-weight: 700;
+    font-size: 2.25em;
+    font-weight: 700;
 }
+
 h2 {
-	font-size: 2em;
+    font-size: 1.35em;
+    line-height: 1.75em;
 }
+
 p {
-	font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
+    font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
+    margin: 0 0 2em 0;
+}
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: inline-block;
+	z-index: 999;
+	&.alt {
+		background: rgba(73, 93, 103, 0.68);
+	}
 }
 .header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)),  url('https://unsplash.com/photos/n5wwck8ES4w/download?force=true') center center no-repeat fixed;
-	background-size: cover;
-	color: #fff;
-	h1 {
-		letter-spacing: 1.5em;
-    	text-transform: uppercase;
-    	text-shadow: 1px 15px 12px #000;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url('https://unsplash.com/photos/n5wwck8ES4w/download?force=true') center center no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    h1 {
+    	text-align: center;
+        letter-spacing: 1.5em;
+        text-transform: uppercase;
+        text-shadow: 1px 15px 12px #000;
+    }
 }
+
 .sec {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    background: #0288D1;
+}
+.inner:nth-child(1) {
+	background: rgba(0, 0, 0, 0.15);
 }
 .one {
-	background: url(https://unsplash.com/photos/2Jl8gtDwQPY/download?force=true) center center no-repeat fixed;
+    background: url(https://images.unsplash.com/photo-1429516387459-9891b7b96c78?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=) center center no-repeat fixed;
+    background-size: cover;
 }
+
 .two {
-	background:transparent url('https://images.unsplash.com/photo-1474767821094-a8fe9d8c8fdd?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=') center center no-repeat fixed;
-	background-size: cover;
+    background: transparent url('https://images.unsplash.com/photo-1474767821094-a8fe9d8c8fdd?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=') center center no-repeat fixed;
+    background-size: cover;
 }
+
 .inner {
-	width: 100%;
-	background: rgba(220, 220, 220, 0.75);
+    width: 100%;
+//    background: rgba(220, 220, 220, 0.75);
+	color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.content {
+	h2 {
+		text-shadow: 0px 5px 3px #000;
+		font-size: 1.55em;
+		font-weight: 500;
+	}
 	padding: 2em 4em 0.1em 4em;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	position: relative;
-	.content {
-		max-width: 48em;
-	}
-	.image {
-		top: 0;
-		left: 0;
-		width: 40%;
-		position: relative;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		img {
-			display: block;
-		}
-	}
+    max-width: 48em;
+    width: 60%;
+}
+
+.image {
+    width: 40%;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.image {
+    display: inline-block;
+    position: relative;
+}
+
+.footer {
+	background: #666;
 }
