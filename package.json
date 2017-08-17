@@ -6,9 +6,10 @@
   "author": "Chun Yu",
   "license": "MIT",
   "dependencies": {
+    "breakpoint-sass": "^2.7.1",
     "gulp": "^3.9.1",
-    "susy": "2.2.12",
     "gulp-connect": "5.0.0",
-    "gulp-sass": "3.1.0"
+    "gulp-sass": "3.1.0",
+    "susy": "2.2.12"
   }
 }

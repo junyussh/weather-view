@@ -12,7 +12,7 @@ gulp.task('sass', function() {
           outputStyle: '',
           sourceMap: false,
           sourceMapContents: false,
-          includePaths: ['node_modules/susy/sass']
+          includePaths: ['node_modules/susy/sass', "node_modules/breakpoint-sass/stylesheets"]
       }).on('error', sass.logError))
       .pipe(gulp.dest('assets/css'))
       .pipe(connect.reload());

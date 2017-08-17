@@ -52,6 +52,31 @@ nav {
   flex-direction: row;
   height: 100vh;
   background: #0288D1; }
+  .sec .image {
+    width: 40%; }
+    .sec .image img {
+      width: 100%;
+      display: block; }
+  @media (min-width: 1280px) {
+    .sec .image {
+      width: 45%; }
+    .sec .content {
+      width: 55%; } }
+  @media (min-width: 980px) {
+    .sec {
+      display: block; }
+      .sec br {
+        display: none; }
+      .sec .image {
+        width: 100%; }
+      .sec .content {
+        padding: 4em 3em;
+        max-width: none;
+        text-align: center;
+        width: 100%; } }
+  @media (min-width: 736px) {
+    .sec .content {
+      padding: 2em 3em; } }
 
 .inner:nth-child(1) {
   background: rgba(0, 0, 0, 0.15); }
@@ -80,12 +105,6 @@ nav {
     text-shadow: 0px 5px 3px #000;
     font-size: 1.55em;
     font-weight: 500; }
-
-.image {
-  width: 40%; }
-  .image img {
-    width: 100%;
-    display: block; }
 
 .image {
   display: inline-block;

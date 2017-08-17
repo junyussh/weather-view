@@ -1,4 +1,12 @@
+@import "susy";
+@import "breakpoint";
 @import url(https://fonts.cat.net/css?family=Lato|Noto+Sans);
+$xlarge: 1680px;
+$large: 1280px;
+$medium: 980px;
+$small: 736px;
+$xsmall: 480px;
+
 body {
     //font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
     font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
@@ -26,16 +34,18 @@ p {
     font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
     margin: 0 0 2em 0;
 }
+
 nav {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	display: inline-block;
-	z-index: 999;
-	&.alt {
-		background: rgba(73, 93, 103, 0.68);
-	}
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: inline-block;
+    z-index: 999;
+    &.alt {
+        background: rgba(73, 93, 103, 0.68);
+    }
 }
+
 .header {
     display: flex;
     justify-content: center;
@@ -45,7 +55,7 @@ nav {
     background-size: cover;
     color: #fff;
     h1 {
-    	text-align: center;
+        text-align: center;
         letter-spacing: 1.5em;
         text-transform: uppercase;
         text-shadow: 1px 15px 12px #000;
@@ -59,10 +69,53 @@ nav {
     flex-direction: row;
     height: 100vh;
     background: #0288D1;
+    .image {
+        width: 40%;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    @include breakpoint($large) {
+        .image {
+            width: 45%;
+        }
+
+        .content {
+            width: 55%;
+        }
+    }
+
+    @include breakpoint($medium) {
+        display: block;
+
+        br {
+            display: none;
+        }
+
+        .image {
+            width: 100%;
+        }
+
+        .content {
+            padding: 4em 3em;
+            max-width: none;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    @include breakpoint($small) {
+        .content {
+            padding: 2em 3em;
+        }
+    }
 }
+
 .inner:nth-child(1) {
-	background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.15);
 }
+
 .one {
     background: url(https://images.unsplash.com/photo-1429516387459-9891b7b96c78?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=) center center no-repeat fixed;
     background-size: cover;
@@ -74,9 +127,8 @@ nav {
 }
 
 .inner {
-    width: 100%;
-//    background: rgba(220, 220, 220, 0.75);
-	color: #fff;
+    width: 100%; //    background: rgba(220, 220, 220, 0.75);
+    color: #fff;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -84,23 +136,17 @@ nav {
 }
 
 .content {
-	h2 {
-		text-shadow: 0px 5px 3px #000;
-		font-size: 1.55em;
-		font-weight: 500;
-	}
-	padding: 2em 4em 0.1em 4em;
+    h2 {
+        text-shadow: 0px 5px 3px #000;
+        font-size: 1.55em;
+        font-weight: 500;
+    }
+    padding: 2em 4em 0.1em 4em;
     max-width: 48em;
     width: 60%;
 }
 
-.image {
-    width: 40%;
-    img {
-        width: 100%;
-        display: block;
-    }
-}
+
 
 .image {
     display: inline-block;
@@ -108,5 +154,5 @@ nav {
 }
 
 .footer {
-	background: #666;
+    background: #666;
 }
