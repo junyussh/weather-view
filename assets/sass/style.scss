@@ -60,6 +60,9 @@ nav {
         text-transform: uppercase;
         text-shadow: 1px 15px 12px #000;
     }
+    @include breakpoint($small) {
+    	height: 70%;
+    }
 }
 
 .sec {
