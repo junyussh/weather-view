@@ -6,8 +6,7 @@ $large: 1280px;
 $medium: 980px;
 $small: 736px;
 $xsmall: 480px;
-$pc: 1280;
-$pad: 980 1280;
+
 body {
     //font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
     font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
@@ -69,15 +68,15 @@ nav {
     flex-direction: row;
     height: 100vh;
     background: #0288D1;
-    
-    @include breakpoint($small) {
-    	display: block;
-    	height: auto;
-    }
     @include breakpoint($medium) {
     	display: flex;
     	height: 100vh;
+    }    
+    @include breakpoint(max-width $medium) {
+    	display: block;
+    	height: auto;
     }
+
     .inner {
         .image {
             width: 45%;
@@ -90,7 +89,18 @@ nav {
         	width: 55%;
         	padding: 2em 4em 0.1em 4em;
         }
-        @include breakpoint($small) {
+        @include breakpoint($medium) {
+        	display: flex;
+            .image {
+                width: 45%;
+            }
+
+            .content {
+                width: 55%;
+                text-align: inherit;
+            }
+        }
+        @include breakpoint(max-width $medium) {
             display: block;
             br {
                 display: none;
@@ -106,17 +116,6 @@ nav {
                 max-width: none;
                 text-align: center;
                 width: 100%;
-            }
-        }
-        @include breakpoint($medium) {
-        	display: flex;
-            .image {
-                width: 45%;
-            }
-
-            .content {
-                width: 55%;
-                text-align: inherit;
             }
         }
 
