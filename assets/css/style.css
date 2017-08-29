@@ -1669,19 +1669,37 @@ nav {
   nav.alt {
     background: rgba(73, 93, 103, 0.68); }
 
-.header {
+.full {
+  height: 100vh; }
+
+.index {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url("https://unsplash.com/photos/n5wwck8ES4w/download?force=true") center center no-repeat fixed;
+  justify-content: center;
+  color: #fff;
   background-size: cover;
-  color: #fff; }
-  .header h1 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  .index .content h1 {
     text-align: center;
     letter-spacing: 1.5em;
     text-transform: uppercase;
     text-shadow: 1px 15px 12px #000; }
+
+.header {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff; }
+  .header .overlay {
+    padding: 100px 0;
+    background: rgba(0, 0, 0, 0.6); }
+  .header .message {
+    text-align: center; }
+    .header .message h1 {
+      font-size: 36px;
+      font-weight: 300;
+      font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial","Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Ubuntu,"Bitstream Vera Sans","DejaVu Sans",Tahoma,微軟正黑體,"LiHei Pro","WenQuanYi Micro Hei","Droid Sans Fallback","AR PL UMing TW",Roboto,"Helvetica Neue","Hiragino Maru Gothic ProN",メイリオ,"ヒラギノ丸ゴ ProN W4",Meiryo,"Droid Sans",sans-serif; }
 
 .sec {
   display: flex;
