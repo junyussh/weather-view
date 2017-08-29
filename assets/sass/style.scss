@@ -38,16 +38,21 @@ p {
 
 nav {
     ul {
+    	margin: 0 auto;
         li {
             list-style: none;
             display: inline-block;
+            float: left;
         }
         a {
         	color: rgba(255, 255, 255, 0.9);
-        	padding: 0 15px;
+        	transition: linear .2s;
+        	padding: 15px;
         	text-decoration: none;
+        	position: relative;
+        	display: block;
         	&:hover {
-        		background: rgba(224, 224, 224, 0.9);
+        		background: #344249;
         	}
         }
     }

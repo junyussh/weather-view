@@ -16,6 +16,9 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  position: relative;
+  top: 1px;
+  margin-right: .45em;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -1648,15 +1651,21 @@ nav {
   display: inline-block;
   z-index: 999;
   background: rgba(73, 93, 103, 0.68); }
-  nav ul li {
-    list-style: none;
-    display: inline-block; }
-  nav ul a {
-    color: rgba(255, 255, 255, 0.9);
-    padding: 0 15px;
-    text-decoration: none; }
-    nav ul a:hover {
-      background: rgba(224, 224, 224, 0.9); }
+  nav ul {
+    margin: 0 auto; }
+    nav ul li {
+      list-style: none;
+      display: inline-block;
+      float: left; }
+    nav ul a {
+      color: rgba(255, 255, 255, 0.9);
+      transition: linear .2s;
+      padding: 15px;
+      text-decoration: none;
+      position: relative;
+      display: block; }
+      nav ul a:hover {
+        background: #344249; }
   nav.alt {
     background: rgba(73, 93, 103, 0.68); }
 

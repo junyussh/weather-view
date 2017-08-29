@@ -24,7 +24,7 @@ gulp.task('html', function() {
 gulp.task('watch',function(){
     gulp.watch('assets/sass/*.scss',['sass']);
     gulp.watch("assets/css/*.css", connect.reload);
-    gulp.watch("*.html", ["html"])
+    gulp.watch(["*.html", "data/*.html"], ["html"])
 });
 
 gulp.task('default',['watch',"server", "sass"]);
