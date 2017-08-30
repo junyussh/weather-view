@@ -1623,17 +1623,10 @@
   content: ""; }
 
 body {
-  font-family: "Lato", "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial","Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Ubuntu,"Bitstream Vera Sans","DejaVu Sans",Tahoma,微軟正黑體,"LiHei Pro","WenQuanYi Micro Hei","Droid Sans Fallback","AR PL UMing TW",Roboto,"Helvetica Neue","Hiragino Maru Gothic ProN",メイリオ,"ヒラギノ丸ゴ ProN W4",Meiryo,"Droid Sans",sans-serif;
+  font-family: "Lato", "SF Pro TC", "SF Pro Text", "SF Pro Icons", "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", "Microsoft JhengHei", wf_SegoeUI, "Segoe UI", Segoe, "Segoe WP", Tahoma, Verdana, Ubuntu, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, 微軟正黑體, "LiHei Pro", "WenQuanYi Micro Hei", "Droid Sans Fallback", "AR PL UMing TW", Roboto, "Helvetica Neue", "Hiragino Maru Gothic ProN", メイリオ, "ヒラギノ丸ゴ ProN W4", Meiryo, "Droid Sans", sans-serif;
   color: rgba(38, 50, 56, 0.88);
   font-size: 18px;
   color: #616161; }
-
-a {
-  color: #1e88e5;
-  transition: ease-in-out .2s;
-  text-decoration: none; }
-  a:hover {
-    color: #42a5f5; }
 
 h1 {
   font-size: 2.25em;
@@ -1651,6 +1644,13 @@ h4 {
 
 p {
   margin: 0 0 2em 0; }
+
+article a {
+  color: #1e88e5;
+  transition: ease-in-out .2s;
+  text-decoration: none; }
+  article a:hover {
+    color: #42a5f5; }
 
 article h2 {
   transition: border-bottom ease-in-out .3s;
