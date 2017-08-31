@@ -35,7 +35,6 @@ h4 {
 }
 
 p {
-    //font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", Raleway, Lato, Noto Sans, serif;
     margin: 0 0 2em 0;
 }
 
@@ -58,6 +57,9 @@ article {
     p {
         margin: auto;
         line-height: 1.7;
+    }
+    li {
+    	line-height: 1.5;
     }
 }
 
@@ -104,7 +106,24 @@ nav {
 .full {
     height: 100vh;
 }
+.card {
 
+}
+.weather {
+	background: #fff;
+	padding: 5px;
+	line-height: 1.7;
+	.tempature {
+		font-size: 36px;
+		i {
+			top: -5px;
+			left: -12px;
+		}
+	}
+	.station {
+		font-weight: bold;
+	}
+}
 .index {
     display: flex;
     align-items: center;

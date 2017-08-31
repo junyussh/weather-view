@@ -1662,6 +1662,9 @@ article p {
   margin: auto;
   line-height: 1.7; }
 
+article li {
+  line-height: 1.5; }
+
 footer {
   color: #eee;
   background: #424242; }
@@ -1695,6 +1698,18 @@ nav {
 
 .full {
   height: 100vh; }
+
+.weather {
+  background: #fff;
+  padding: 5px;
+  line-height: 1.7; }
+  .weather .tempature {
+    font-size: 36px; }
+    .weather .tempature i {
+      top: -5px;
+      left: -12px; }
+  .weather .station {
+    font-weight: bold; }
 
 .index {
   display: flex;
