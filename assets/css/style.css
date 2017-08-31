@@ -1607,10 +1607,6 @@
 .icon-html-five2:before {
   content: ""; }
 
-.icon-html-five3:before{
-  content: ""; }
-}
-
 .icon-css3:before {
   content: ""; }
 
@@ -1649,6 +1645,28 @@ h4 {
 p {
   margin: 0 0 2em 0; }
 
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+  height: 36px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0 16px;
+  vertical-align: middle; }
+
+.btn-flat {
+  vertical-align: middle;
+  transition: ease-in-out .2s;
+  min-width: 88px;
+  padding-top: 3px;
+  color: #343434; }
+  .btn-flat:active {
+    background: rgba(0, 0, 0, 0.12); }
+
 article a {
   color: #1e88e5;
   transition: ease-in-out .2s;
@@ -1670,6 +1688,10 @@ article li {
   line-height: 1.5; }
 
 footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 50px 0;
   color: #eee;
   background: #424242; }
   footer p {
@@ -1703,17 +1725,50 @@ nav {
 .full {
   height: 100vh; }
 
+.station-list {
+  background: #ededed; }
+
+.cards {
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 8px; }
+
 .weather {
+  transition: ease-in-out .2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
   background: #fff;
-  padding: 5px;
   line-height: 1.7; }
+  .weather:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .weather .station {
+    color: #212121;
+    font-size: 24px;
+    padding-top: 24px;
+    font-weight: bold; }
   .weather .tempature {
-    font-size: 36px; }
+    color: #616161;
+    font-size: 34px; }
     .weather .tempature i {
       top: -5px;
       left: -12px; }
-  .weather .station {
-    font-weight: bold; }
+    .weather .tempature .large {
+      float: right;
+      margin: 0;
+      font-size: 34px;
+      top: 13px; }
+  .weather .status {
+    color: #616161;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 14px; }
+  .weather .actions {
+    padding-left: -8px;
+    padding-top: 8px;
+    padding-bottom: 8px; }
 
 .index {
   display: flex;
@@ -1822,6 +1877,3 @@ nav {
 .image {
   display: inline-block;
   position: relative; }
-
-.footer {
-  background: #666; }
