@@ -488,6 +488,9 @@
 .icon-bubbles4:before {
   content: ""; }
 
+.icon-github:brfore{
+  content: ""; }
+  
 .icon-user:before {
   content: ""; }
 
@@ -1606,6 +1609,10 @@
 
 .icon-html-five2:before {
   content: ""; }
+
+.icon-html-five3:before{
+  content: ""; }
+}
 
 .icon-css3:before {
   content: ""; }
