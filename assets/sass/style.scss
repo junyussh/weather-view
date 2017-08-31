@@ -1,6 +1,8 @@
 @import "susy";
 @import "breakpoint";
+// self library
 @import "icon";
+@import "mixin";
 @import url(https://fonts.cat.net/css?family=Lato|Noto+Sans);
 $xlarge: 1680px;
 $large: 1280px;
@@ -38,6 +40,31 @@ p {
     margin: 0 0 2em 0;
 }
 
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 2px;
+    height: 36px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding: 0 16px;
+    vertical-align: middle;
+}
+
+.btn-flat {
+    vertical-align: middle;
+    transition: ease-in-out .2s;
+    min-width: 88px;
+    padding-top: 3px;
+    color: #343434;
+    &:active {
+        background: rgba(0, 0, 0, 0.12);
+    }
+}
+
 article {
     a {
         color: #1e88e5;
@@ -59,7 +86,7 @@ article {
         line-height: 1.7;
     }
     li {
-    	line-height: 1.5;
+        line-height: 1.5;
     }
 }
 
@@ -67,6 +94,10 @@ footer {
     p {
         margin: auto;
     }
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 50px 0;
     color: #eee;
     background: #424242;
 }
@@ -106,24 +137,62 @@ nav {
 .full {
     height: 100vh;
 }
-.card {
 
+.station-list {
+    background: rgb(237, 237, 237);
 }
+
+.cards {
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 8px;
+}
+
 .weather {
-	background: #fff;
-	padding: 5px;
-	line-height: 1.7;
-	.tempature {
-		font-size: 36px;
-		i {
-			top: -5px;
-			left: -12px;
-		}
-	}
-	.station {
-		font-weight: bold;
-	}
+    transition: ease-in-out .2s;
+    @include shadow(2);
+    border-radius: 2px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: #fff;
+    line-height: 1.7;
+    &:hover {
+        @include shadow(3);
+    }
+    .station {
+        color: #212121;
+        font-size: 24px;
+        padding-top: 24px;
+        font-weight: bold;
+    }
+    .tempature {
+        color: #616161;
+        font-size: 34px;
+        i {
+            top: -5px;
+            left: -12px;
+        }
+        .large {
+            float: right;
+            margin: 0;
+            font-size: 34px;
+            top: 13px;
+        }
+    }
+    .status {
+        color: #616161;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 14px;
+    }
+    .actions {
+        padding-left: -8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
 }
+
 .index {
     display: flex;
     align-items: center;
@@ -263,8 +332,4 @@ nav {
 .image {
     display: inline-block;
     position: relative;
-}
-
-.footer {
-    background: #666;
 }
