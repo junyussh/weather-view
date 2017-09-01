@@ -17,6 +17,14 @@ body {
     font-size: 18px;
     color: #616161;
 }
+ul {
+	margin: 0 auto;
+}
+li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+}
 
 h1 {
     font-size: 2.25em;
@@ -91,6 +99,14 @@ article {
 }
 
 footer {
+    a {
+        color: #1e88e5;
+        transition: ease-in-out .2s;
+        text-decoration: none;
+        &:hover {
+            color: #42a5f5;
+        }
+    }
     p {
         margin: auto;
     }

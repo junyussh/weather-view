@@ -1628,6 +1628,14 @@ body {
   font-size: 18px;
   color: #616161; }
 
+ul {
+  margin: 0 auto; }
+
+li {
+  list-style: none;
+  display: inline-block;
+  float: left; }
+
 h1 {
   font-size: 2.25em;
   font-weight: 700; }
@@ -1694,6 +1702,12 @@ footer {
   padding: 50px 0;
   color: #eee;
   background: #424242; }
+  footer a {
+    color: #1e88e5;
+    transition: ease-in-out .2s;
+    text-decoration: none; }
+    footer a:hover {
+      color: #42a5f5; }
   footer p {
     margin: auto; }
 
