@@ -1631,11 +1631,6 @@ body {
 ul {
   margin: 0 auto; }
 
-li {
-  list-style: none;
-  display: inline-block;
-  float: left; }
-
 h1 {
   font-size: 2.25em;
   font-weight: 700; }
@@ -1710,6 +1705,10 @@ footer {
       color: #42a5f5; }
   footer p {
     margin: auto; }
+  footer li {
+    list-style: none;
+    display: inline-block;
+    float: left; }
 
 nav {
   position: fixed;
