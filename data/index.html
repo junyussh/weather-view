@@ -25,10 +25,42 @@
                     <h1>歡迎使用氣象站服務</h1>
                 </div>
             </div>
-            <a href="#one"></a></div>
+            <a href="#one"></a>
+        </div>
     </header>
     <div class="station-list">
         <div class="container">
+            <template v-for="weather in items">
+                <div class="cards">
+                <div class="weather">
+                    <div class="station">內湖高中</div>
+                    <div class="tempature">
+                        <span class="value">{{weather.temperature}}</span>
+                        <i class="icon-Celsius"></i>
+                        <i class="large icon-windy2"></i>
+                    </div>
+                    <div class="status">
+                        <div class="light">
+                            <i class="icon-sun4"></i><span class="value">{{weather.light}}</span>
+                        </div>
+                        <div class="humidity">
+                            <i class="icon-droplet"></i><span class="humidity">{{weather.humidity}}</span><span> %</span>
+                        </div>
+                        <div class="uv">
+                            <span class="value"></span>
+                        </div>
+                        <div class="light">
+                            <span class="value"></span>
+                        </div>
+                        <div class="rainfall"><span class="value"></span></div>
+                    </div>
+                    <div class="actions">
+                        <a class="btn btn-flat">Full Report</a>
+                    </div>
+                </div>
+            </div>
+            </template>
+            <!--
             <div class="cards">
                 <div class="weather">
                     <div class="station">內湖高中</div>
@@ -162,6 +194,7 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
     </div>
     <footer>
@@ -169,6 +202,8 @@
             <p>Copyright &#169; 2016-2017 Weather Service Project All rights reserved.</p>
         </div>
     </footer>
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/controller.js"></script>
 </body>
 
 </html>

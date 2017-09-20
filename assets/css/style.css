@@ -1801,6 +1801,7 @@ nav {
 .header {
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: auto;
   color: #fff; }
   .header .overlay {
     padding: 100px 0;
