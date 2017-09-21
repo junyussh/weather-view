@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var sass = require("gulp-sass");
 var babel = require('gulp-babel');
+var browserify = require('gulp-browserify');
+
 gulp.task('server', function() {
     connect.server({
         livereload: true,
@@ -24,8 +26,12 @@ gulp.task('html', function() {
 });
 gulp.task('build', function() {
     gulp.src('assets/js/*.js')
-        //.pipe(babel())
-        //.pipe(gulp.dest('dist'))
+        .pipe(browserify({
+          insertGlobals : true,
+          debug : !gulp.env.production
+        }))
+        .pipe(babel())
+        .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
 });
 gulp.task('watch',function(){
