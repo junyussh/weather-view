@@ -1,176 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <title>Modal</title>
+    <style>
+      #tall {
+        height: 1500px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
 
-<head>
-    <meta charset="UTF-8">
-    <title>觀測數據</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-</head>
 
-<body>
-    <nav class="nav">
-        <ul>
-            <li><a href="/"><i class="icon-home"></i>Home</a></li>
-            <li><a href="/data"><i class="icon-stats-dots"></i>數據觀測</a></li>
-            <li><a href="/about.html"><i class="icon-users"></i>關於我們</a></li>
-            <li><a href="https://github.com/oxygen-TW/Weather-Station"><i class="icon-github"></i>Github</a></li>
-        </ul>
-    </nav>
-    <header class="header" style="background-image: url(https://unsplash.it/1583/315?random&element=DIV);">
-        <div class="overlay">
-            <div class="container">
-                <div class="message">
-                    <h1>歡迎使用氣象站服務</h1>
-                </div>
+    <div class="container mt-3">
+      <h1>Modal <small>圖表測試    </small></h1>
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">數據視覺化</h4>
             </div>
-            <a href="#one"></a></div>
-    </header>
-    <div class="station-list">
-        <div class="container">
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">內湖高中</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-windy2"></i>
+            <div class="modal-body">
+              <h4>數據視覺化</h4>
+              <p>圖表</p>
+
+              
+              <div id="accordion" role="tablist">
+                <div class="card">
+                  <div class="card-header" role="tab" id="headingOne">
+                    <h5 class="mb-0">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        圖表
+                      </a>
+                    </h5>
+                  </div>
+
+                  <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="card-body">
+                      圖表
                     </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">8</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-droplet"></i><span class="humidity">76%</span>
-                        </div>
-                        <div class="uv">
-                            <span class="value"></span>
-                        </div>
-                        <div class="light">
-                            <span class="value"></span>
-                        </div>
-                        <div class="rainfall"><span class="value"></span></div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
+                  </div>
                 </div>
+                
+              </div>
+
             </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-cloudy"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">23</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">48%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-windy2"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">8</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">76%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-sun"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">8</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">76%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-windy2"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">8</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">76%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">31</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-sun"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">14</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">10%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="modal fade" id="firefoxModal" tabindex="-1" role="dialog" aria-labelledby="firefoxModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="firefoxModalLabel">Firefox Bug Test</h4>
+            </div>
+            <div class="modal-body">
+              <ol>
+                <li>Ensure you're using Firefox.</li>
+                <li>Open a new tab and then switch back to this tab.</li>
+                <li>Click into this input: <input type="text" id="ff-bug-input"></li>
+                <li>Switch to the other tab and then back to this tab.</li>
+              </ol>
+              <p>Test result: <strong id="ff-bug-test-result"></strong></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        圖表測試
+      </button>
+
+
+
+      <br><br>
+
+      <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#firefoxModal">
+        Launch Firefox bug test modal
+      </button>
+      (<a href="https://github.com/twbs/bootstrap/issues/18365">See Issue #18365</a>)
+
+      <br><br>
+
+      <div class="bg-dark text-white p-2" id="tall" style="display: none;">
+        Tall body content to force the page to have a scrollbar.
+      </div>
     </div>
-    <footer>
-        <div class="container">
-            <p>Copyright &#169; 2016-2017 Weather Service Project All rights reserved.</p>
-        </div>
-    </footer>
-</body>
 
+    <script src="../assets/js/jquery-slim.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/modal.js"></script>
+    <script src="../assets/js/collapse.js"></script>
+    <script src="../assets/js/tooltip.js"></script>
+    <script src="../assets/js/popover.js"></script>
+
+  </body>
 </html>
-<!-- copyright weather service project 2016-2017
-    All copyright reserved-->
