@@ -1,5 +1,126 @@
 @charset "UTF-8";
+/* Nav bar */
 @import url(https://fonts.cat.net/css?family=Lato|Noto+Sans);
+nav {
+  position: absolute;
+  z-index: 999; }
+  nav ul {
+    margin: 0 auto; }
+    nav ul li {
+      list-style: none; }
+
+.open {
+  cursor: pointer;
+  font-size: 2em;
+  padding-left: 40px; }
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: inline-block;
+  z-index: 999;
+  background: rgba(73, 93, 103, 0.68); }
+  .nav ul {
+    margin: 0 auto; }
+    @media (max-width: 980px) {
+      .nav ul {
+        display: none; } }
+    .nav ul li {
+      list-style: none;
+      display: inline-block;
+      float: left; }
+    .nav ul a {
+      color: rgba(255, 255, 255, 0.9);
+      transition: linear .2s;
+      padding: 15px;
+      text-decoration: none;
+      position: relative;
+      display: block; }
+      .nav ul a:hover {
+        background: #344249; }
+  .nav.alt {
+    background: rgba(73, 93, 103, 0.68); }
+
+.sidebar {
+  display: none;
+  background: #031727;
+  width: 260px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 10px; }
+  .sidebar .close {
+    cursor: pointer; }
+  .sidebar ul {
+    padding: 0; }
+  .sidebar li {
+    transition: all linear .1s; }
+    .sidebar li:first-child:before {
+      display: none; }
+    .sidebar li:before {
+      display: block;
+      top: auto;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.5); }
+    .sidebar li:hover {
+      background: rgba(255, 255, 255, 0.08); }
+  .sidebar a {
+    transition: all linear .2s;
+    padding: 13px 16px;
+    color: #eee;
+    text-decoration: none;
+    display: block; }
+    .sidebar a:hover {
+      color: #18C29C; }
+
+/* Nav Bar end */
+/* weather cards */
+.cards {
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+.weather {
+  transition: ease-in-out .2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background: #fff;
+  line-height: 1.7; }
+  .weather:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .weather .station {
+    color: #212121;
+    font-size: 24px;
+    padding-top: 24px;
+    font-weight: bold; }
+  .weather .tempature {
+    color: #616161;
+    font-size: 34px; }
+    .weather .tempature i {
+      top: -5px;
+      left: -12px; }
+    .weather .tempature .large {
+      float: right;
+      margin: 0;
+      font-size: 34px;
+      top: 13px; }
+  .weather .status {
+    color: #616161;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 14px; }
+  .weather .actions {
+    padding-left: -8px;
+    padding-top: 8px;
+    padding-bottom: 8px; }
+
+/* Weather Cards end */
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?2q1imw");
@@ -1658,17 +1779,28 @@ p {
   border: none;
   cursor: pointer;
   background: none;
-  padding: 0 16px;
+  padding: 2px 16px;
   vertical-align: middle; }
 
 .btn-flat {
+  display: flex;
+  align-items: center;
+  justify-items: center;
   vertical-align: middle;
   transition: ease-in-out .2s;
   min-width: 88px;
-  padding-top: 3px;
   color: #343434; }
   .btn-flat:active {
     background: rgba(0, 0, 0, 0.12); }
+
+@media (min-width: 980px) {
+  article {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
+
+@media (max-width: 980px) {
+  article {
+    padding: 20px auto; } }
 
 article a {
   color: #1e88e5;
@@ -1691,7 +1823,6 @@ article li {
   line-height: 1.5; }
 
 footer {
-  position: relative;
   bottom: 0;
   width: 100%;
   padding: 50px 0;
@@ -1710,78 +1841,8 @@ footer {
     display: inline-block;
     float: left; }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: inline-block;
-  z-index: 999;
-  background: rgba(73, 93, 103, 0.68); }
-  nav ul {
-    margin: 0 auto; }
-    nav ul li {
-      list-style: none;
-      display: inline-block;
-      float: left; }
-    nav ul a {
-      color: rgba(255, 255, 255, 0.9);
-      transition: linear .2s;
-      padding: 15px;
-      text-decoration: none;
-      position: relative;
-      display: block; }
-      nav ul a:hover {
-        background: #344249; }
-  nav.alt {
-    background: rgba(73, 93, 103, 0.68); }
-
-.full {
-  height: 100vh; }
-
 .station-list {
   background: #ededed; }
-
-.cards {
-  display: inline-block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-right: 8px; }
-
-.weather {
-  transition: ease-in-out .2s;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 2px;
-  padding-left: 16px;
-  padding-right: 16px;
-  background: #fff;
-  line-height: 1.7; }
-  .weather:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
-  .weather .station {
-    color: #212121;
-    font-size: 24px;
-    padding-top: 24px;
-    font-weight: bold; }
-  .weather .tempature {
-    color: #616161;
-    font-size: 34px; }
-    .weather .tempature i {
-      top: -5px;
-      left: -12px; }
-    .weather .tempature .large {
-      float: right;
-      margin: 0;
-      font-size: 34px;
-      top: 13px; }
-  .weather .status {
-    color: #616161;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: 14px; }
-  .weather .actions {
-    padding-left: -8px;
-    padding-top: 8px;
-    padding-bottom: 8px; }
 
 .index {
   display: flex;
@@ -1792,17 +1853,27 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed; }
+  @media (min-width: 980px) {
+    .index {
+      height: 100vh; } }
+  @media (max-width: 980px) {
+    .index {
+      height: 500px; } }
   .index .content h1 {
     text-align: center;
     letter-spacing: 1.5em;
     text-transform: uppercase;
     text-shadow: 1px 15px 12px #000; }
+    @media (max-width: 980px) {
+      .index .content h1 {
+        letter-spacing: 0.5em; } }
 
 .header {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto;
-  color: #fff; }
+  color: #fff;
+  line-height: 0; }
   .header .overlay {
     padding: 100px 0;
     background: rgba(0, 0, 0, 0.6); }

@@ -31,34 +31,36 @@
     <div class="station-list">
         <div class="container">
             <template v-for="weather in items">
-                <div class="cards">
-                <div class="weather">
-                    <div class="station">內湖高中</div>
-                    <div class="tempature">
-                        <span class="value">{{weather.temperature}}</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-windy2"></i>
-                    </div>
-                    <div class="status">
-                        <div class="light">
-                            <i class="icon-sun4"></i><span class="value">{{weather.light}}</span>
+                <div class="col-xs-3 col-sm-3">
+                    <div class="cards">
+                        <div class="weather">
+                            <div class="station">{{weather.location}}</div>
+                            <div class="tempature">
+                                <span class="value">{{weather.temperature}}</span>
+                                <i class="icon-Celsius"></i>
+                                <i class="large icon-windy2"></i>
+                            </div>
+                            <div class="status">
+                                <div class="light">
+                                    <i class="icon-sun4"></i><span class="value">{{weather.light}}</span>
+                                </div>
+                                <div class="humidity">
+                                    <i class="icon-droplet"></i><span class="humidity">{{weather.humidity}}</span><span> %</span>
+                                </div>
+                                <div class="uv">
+                                    <span class="value"></span>
+                                </div>
+                                <div class="light">
+                                    <span class="value"></span>
+                                </div>
+                                <div class="rainfall"><span class="value"></span></div>
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-flat">Full Report</a>
+                            </div>
                         </div>
-                        <div class="humidity">
-                            <i class="icon-droplet"></i><span class="humidity">{{weather.humidity}}</span><span> %</span>
-                        </div>
-                        <div class="uv">
-                            <span class="value"></span>
-                        </div>
-                        <div class="light">
-                            <span class="value"></span>
-                        </div>
-                        <div class="rainfall"><span class="value"></span></div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
                     </div>
                 </div>
-            </div>
             </template>
             <!--
             <div class="cards">

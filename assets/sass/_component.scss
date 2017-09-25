@@ -1,0 +1,150 @@
+@import "breakpoint";
+@import "mixin";
+$medium: 980px;
+/* Nav bar */
+nav {
+    ul {
+        margin: 0 auto;
+        li {
+            list-style: none;
+        }
+    }
+    position: absolute;
+    z-index: 999;
+}
+.open {
+    cursor: pointer;
+    font-size: 2em;
+    padding-left: 40px;
+}
+.nav {
+    ul {
+        @include breakpoint(max-width $medium) {
+            display: none;
+        }
+        margin: 0 auto;
+        li {
+            list-style: none;
+            display: inline-block;
+            float: left;
+        }
+        a {
+            color: rgba(255, 255, 255, 0.9);
+            transition: linear .2s;
+            padding: 15px;
+            text-decoration: none;
+            position: relative;
+            display: block;
+            &:hover {
+                background: #344249;
+            }
+        }
+    }
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: inline-block;
+    z-index: 999;
+    background: rgba(73, 93, 103, 0.68);
+    &.alt {
+        background: rgba(73, 93, 103, 0.68);
+    }
+}
+
+.sidebar {
+    display: none;
+    background: #031727;
+    width: 260px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 10px;
+
+    .close {
+        cursor: pointer;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        transition: all linear .1s;
+        &:first-child:before {
+            display: none;
+        }
+        &:before {
+            display: block;
+            top: auto;
+            bottom: 0;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        &:hover {
+            background: rgba(255,255,255,.08);
+        }
+    }
+    a {
+        transition: all linear .2s;
+        padding: 13px 16px;
+        color: #eee;
+        text-decoration: none;
+        display: block;
+        &:hover {
+            color: #18C29C;
+        }
+    }
+}
+/* Nav Bar end */
+/* weather cards */
+.cards {
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.weather {
+    transition: ease-in-out .2s;
+    @include shadow(2);
+    border-radius: 2px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: #fff;
+    line-height: 1.7;
+    &:hover {
+        @include shadow(3);
+    }
+    .station {
+        color: #212121;
+        font-size: 24px;
+        padding-top: 24px;
+        font-weight: bold;
+    }
+    .tempature {
+        color: #616161;
+        font-size: 34px;
+        i {
+            top: -5px;
+            left: -12px;
+        }
+        .large {
+            float: right;
+            margin: 0;
+            font-size: 34px;
+            top: 13px;
+        }
+    }
+    .status {
+        color: #616161;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 14px;
+    }
+    .actions {
+        padding-left: -8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+/* Weather Cards end */
