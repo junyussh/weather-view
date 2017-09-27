@@ -12,8 +12,12 @@
 <body>
     <header class="index" style="background-image: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url(https://unsplash.com/photos/n5wwck8ES4w/download?force=true);">
         <nav class="sidebar">
-            <a class="close"><i class="icon-cross"></i></a>
-            <ul>
+            <div class="float">
+                <span :class="{ active: isActive, open: true }" v-on:click="toggle">
+        		<i class="icon-menu5"></i>
+        	</span>
+            </div>
+            <ul :class="{ active: isActive }">
                 <li><a href="/"><i class="icon-home"></i>Home</a></li>
                 <li><a href="/data"><i class="icon-stats-dots"></i>數據觀測</a></li>
                 <li><a href="/about.html"><i class="icon-users"></i>關於我們</a></li>
@@ -66,6 +70,24 @@
             <p>Copyright &#169; 2016-2017 Weather Service Project All rights reserved.</p>
         </div>
     </footer>
+    <script src="assets/js/vue.js"></script>
+    <script type="text/javascript">
+    var toggle = new Vue({
+        el: ".sidebar",
+        delimiters: ['${', '}'],
+        data: {
+            isActive: false
+        },
+        methods: {
+        	toggle: function() {
+        		if (this.isActive) {
+        			this.isActive = false;
+        		} else
+        		this.isActive = true;
+        	}
+        }
+    })
+    </script>
 </body>
 
 </html>

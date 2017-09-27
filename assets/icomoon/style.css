@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2q1imw');
-  src:  url('fonts/icomoon.eot?2q1imw#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?2q1imw') format('truetype'),
-    url('fonts/icomoon.woff?2q1imw') format('woff'),
-    url('fonts/icomoon.svg?2q1imw#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?wg1e1p');
+  src:  url('fonts/icomoon.eot?wg1e1p#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?wg1e1p') format('truetype'),
+    url('fonts/icomoon.woff?wg1e1p') format('woff'),
+    url('fonts/icomoon.svg?wg1e1p#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,81 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ac_unit:before {
+  content: "\eb3b";
+}
+.icon-accessibility2:before {
+  content: "\e84e";
+}
+.icon-add_location:before {
+  content: "\e567";
+}
+.icon-queue:before {
+  content: "\e03c";
+}
+.icon-airline_seat_legroom_extra:before {
+  content: "\e633";
+}
+.icon-android2:before {
+  content: "\e859";
+}
+.icon-apps:before {
+  content: "\e5c3";
+}
+.icon-check:before {
+  content: "\e5ca";
+}
+.icon-close:before {
+  content: "\e5cd";
+}
+.icon-photo_library:before {
+  content: "\e413";
+}
+.icon-content_copy:before {
+  content: "\e14d";
+}
+.icon-content_cut:before {
+  content: "\e14e";
+}
+.icon-content_paste:before {
+  content: "\e14f";
+}
+.icon-mode_edit:before {
+  content: "\e254";
+}
+.icon-create_new_folder:before {
+  content: "\e2cc";
+}
+.icon-dehaze:before {
+  content: "\e3c7";
+}
+.icon-delete:before {
+  content: "\e872";
+}
+.icon-done:before {
+  content: "\e876";
+}
+.icon-done_all:before {
+  content: "\e877";
+}
+.icon-filter2:before {
+  content: "\e3d3";
+}
+.icon-filter_none:before {
+  content: "\e3e0";
+}
+.icon-my_location:before {
+  content: "\e55c";
+}
+.icon-map3:before {
+  content: "\e55b";
+}
+.icon-menu5:before {
+  content: "\e5d2";
+}
+.icon-thumb_up:before {
+  content: "\e8dc";
+}
 .icon-sunrise:before {
   content: "\e900";
 }
@@ -493,7 +568,7 @@
   content: "\e99b";
 }
 .icon-users:before {
-  content: "\e99c";
+  content: "\eb17";
 }
 .icon-user-plus:before {
   content: "\e99d";
@@ -1622,4 +1697,13 @@
 }
 .icon-IcoMoon:before {
   content: "\eb14";
+}
+.icon-light-up:before {
+  content: "\e99c";
+}
+.icon-line-graph:before {
+  content: "\eb15";
+}
+.icon-thermometer2:before {
+  content: "\eb16";
 }

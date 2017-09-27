@@ -1,7 +1,13 @@
 @import "breakpoint";
 @import "mixin";
 $medium: 980px;
+
+
+
+
+
 /* Nav bar */
+
 nav {
     ul {
         margin: 0 auto;
@@ -12,11 +18,13 @@ nav {
     position: absolute;
     z-index: 999;
 }
+
 .open {
     cursor: pointer;
     font-size: 2em;
     padding-left: 40px;
 }
+
 .nav {
     ul {
         @include breakpoint(max-width $medium) {
@@ -52,20 +60,43 @@ nav {
     }
 }
 
+.float {
+    .open {
+    transform: translateX(0);
+        transition: all ease-in-out .2s;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        text-align: center;
+        background: #42a5f5;
+        vertical-align: middle;
+        cursor: pointer;
+        i {
+            margin: 0;
+        }
+    }
+}
+
 .sidebar {
+    @include breakpoint(max-width $medium) {
+        display: block;
+    }
     display: none;
-    background: #031727;
-    width: 260px;
-    height: 100%;
     top: 0;
     left: 0;
-    padding: 15px 10px;
 
-    .close {
-        cursor: pointer;
-    }
     ul {
-        padding: 0;
+        &.active {
+            transition: all 0.3s ease;
+            transform: translateX(0);
+        }
+        transition: all 0.3s ease;
+        background: #031727;
+        width: 260px;
+        transform: translateX(-300px);
+        height: 100%;
+        padding: 15px 10px;
     }
     li {
         transition: all linear .1s;
@@ -82,7 +113,7 @@ nav {
             background: rgba(255, 255, 255, 0.5);
         }
         &:hover {
-            background: rgba(255,255,255,.08);
+            background: rgba(255, 255, 255, .08);
         }
     }
     a {
@@ -96,8 +127,17 @@ nav {
         }
     }
 }
+
+
+
+
+
+
 /* Nav Bar end */
+
+
 /* weather cards */
+
 .cards {
     display: inline-block;
     margin-top: 1em;
@@ -147,4 +187,10 @@ nav {
         padding-bottom: 8px;
     }
 }
+
+
+
+
+
+
 /* Weather Cards end */

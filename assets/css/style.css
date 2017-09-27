@@ -42,18 +42,37 @@ nav {
   .nav.alt {
     background: rgba(73, 93, 103, 0.68); }
 
+.float .open {
+  transform: translateX(0);
+  transition: all ease-in-out .2s;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  background: #42a5f5;
+  vertical-align: middle;
+  cursor: pointer; }
+  .float .open i {
+    margin: 0; }
+
 .sidebar {
   display: none;
-  background: #031727;
-  width: 260px;
-  height: 100%;
   top: 0;
-  left: 0;
-  padding: 15px 10px; }
-  .sidebar .close {
-    cursor: pointer; }
+  left: 0; }
+  @media (max-width: 980px) {
+    .sidebar {
+      display: block; } }
   .sidebar ul {
-    padding: 0; }
+    transition: all 0.3s ease;
+    background: #031727;
+    width: 260px;
+    transform: translateX(-300px);
+    height: 100%;
+    padding: 15px 10px; }
+    .sidebar ul.active {
+      transition: all 0.3s ease;
+      transform: translateX(0); }
   .sidebar li {
     transition: all linear .1s; }
     .sidebar li:first-child:before {
@@ -123,8 +142,8 @@ nav {
 /* Weather Cards end */
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?2q1imw");
-  src: url("../fonts/icomoon.eot?2q1imw#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?2q1imw") format("truetype"), url("../fonts/icomoon.woff?2q1imw") format("woff"), url("../fonts/icomoon.svg?2q1imw#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?wg1e1p");
+  src: url("../fonts/icomoon.eot?wg1e1p#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?wg1e1p") format("truetype"), url("../fonts/icomoon.woff?wg1e1p") format("woff"), url("../fonts/icomoon.svg?wg1e1p#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -143,6 +162,81 @@ nav {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-ac_unit:before {
+  content: ""; }
+
+.icon-accessibility2:before {
+  content: ""; }
+
+.icon-add_location:before {
+  content: ""; }
+
+.icon-queue:before {
+  content: ""; }
+
+.icon-airline_seat_legroom_extra:before {
+  content: ""; }
+
+.icon-android2:before {
+  content: ""; }
+
+.icon-apps:before {
+  content: ""; }
+
+.icon-check:before {
+  content: ""; }
+
+.icon-close:before {
+  content: ""; }
+
+.icon-photo_library:before {
+  content: ""; }
+
+.icon-content_copy:before {
+  content: ""; }
+
+.icon-content_cut:before {
+  content: ""; }
+
+.icon-content_paste:before {
+  content: ""; }
+
+.icon-mode_edit:before {
+  content: ""; }
+
+.icon-create_new_folder:before {
+  content: ""; }
+
+.icon-dehaze:before {
+  content: ""; }
+
+.icon-delete:before {
+  content: ""; }
+
+.icon-done:before {
+  content: ""; }
+
+.icon-done_all:before {
+  content: ""; }
+
+.icon-filter2:before {
+  content: ""; }
+
+.icon-filter_none:before {
+  content: ""; }
+
+.icon-my_location:before {
+  content: ""; }
+
+.icon-map3:before {
+  content: ""; }
+
+.icon-menu5:before {
+  content: ""; }
+
+.icon-thumb_up:before {
+  content: ""; }
 
 .icon-sunrise:before {
   content: ""; }
@@ -613,7 +707,7 @@ nav {
   content: ""; }
 
 .icon-users:before {
-  content: ""; }
+  content: ""; }
 
 .icon-user-plus:before {
   content: ""; }
@@ -1742,6 +1836,15 @@ nav {
 
 .icon-IcoMoon:before {
   content: ""; }
+
+.icon-light-up:before {
+  content: ""; }
+
+.icon-line-graph:before {
+  content: ""; }
+
+.icon-thermometer2:before {
+  content: ""; }
 
 body {
   font-family: "Lato", "SF Pro TC", "SF Pro Text", "SF Pro Icons", "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", "Microsoft JhengHei", wf_SegoeUI, "Segoe UI", Segoe, "Segoe WP", Tahoma, Verdana, Ubuntu, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, 微軟正黑體, "LiHei Pro", "WenQuanYi Micro Hei", "Droid Sans Fallback", "AR PL UMing TW", Roboto, "Helvetica Neue", "Hiragino Maru Gothic ProN", メイリオ, "ヒラギノ丸ゴ ProN W4", Meiryo, "Droid Sans", sans-serif;

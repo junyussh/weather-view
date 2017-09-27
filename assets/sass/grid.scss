@@ -4,7 +4,7 @@
 $Small-device:( columns:12,
 column-width: 37.5px,
 gutter-position: inside,
-);
+gutters: 0);
 
 $Big-device:( columns: 12,
 column-width: 60px,
@@ -28,20 +28,20 @@ $break-Small-device: 380px 768px;
     }
 }
 
-@include breakpoint($break-Small-device) {
-    @for $i from 1 through 12 {
-        @include with-layout($Big-device) {
-            .col-sm-#{$i} {
+@for $i from 1 through 12 {
+    .col-sm-#{$i} {
+        @include breakpoint($break-Small-device) {
+            @include with-layout($Small-device) {
                 @include span($i)
             }
         }
     }
 }
 
-@include breakpoint($big-size) {
-    @for $i from 1 through 12 {
-        @include with-layout($Small-device) {
-            .col-sm-#{$i} {
+@for $i from 1 through 12 {
+    .col-xs-#{$i} {
+        @include with-layout($Big-device) {
+            @include breakpoint($big-size) {
                 @include span($i);
             }
         }
