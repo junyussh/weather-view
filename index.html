@@ -12,23 +12,24 @@
 <body>
     <header class="index" style="background-image: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url(https://unsplash.com/photos/n5wwck8ES4w/download?force=true);">
         <nav class="sidebar">
+            <div class="mask" :class="{ active: isActive }"></div>
             <div class="float">
                 <span :class="{ active: isActive, open: true }" v-on:click="toggle">
         		<i class="icon-menu5"></i>
         	</span>
             </div>
             <ul :class="{ active: isActive }">
-                <li><a href="/"><i class="icon-home"></i>Home</a></li>
-                <li><a href="/data"><i class="icon-stats-dots"></i>數據觀測</a></li>
-                <li><a href="/about.html"><i class="icon-users"></i>關於我們</a></li>
+                <li><a href=""><i class="icon-home"></i>Home</a></li>
+                <li><a href="data"><i class="icon-stats-dots"></i>數據觀測</a></li>
+                <li><a href="about.html"><i class="icon-users"></i>關於我們</a></li>
                 <li><a href="https://github.com/oxygen-TW/Weather-Station"><i class="icon-github"></i>Github</a></li>
             </ul>
         </nav>
         <nav class="nav">
             <ul>
-                <li><a href="/"><i class="icon-home"></i>Home</a></li>
-                <li><a href="/data"><i class="icon-stats-dots"></i>數據觀測</a></li>
-                <li><a href="/about.html"><i class="icon-users"></i>關於我們</a></li>
+                <li><a href=""><i class="icon-home"></i>Home</a></li>
+                <li><a href="data"><i class="icon-stats-dots"></i>數據觀測</a></li>
+                <li><a href="about.html"><i class="icon-users"></i>關於我們</a></li>
                 <li><a href="https://github.com/oxygen-TW/Weather-Station"><i class="icon-github"></i>Github</a></li>
             </ul>
         </nav>
@@ -71,23 +72,7 @@
         </div>
     </footer>
     <script src="assets/js/vue.js"></script>
-    <script type="text/javascript">
-    var toggle = new Vue({
-        el: ".sidebar",
-        delimiters: ['${', '}'],
-        data: {
-            isActive: false
-        },
-        methods: {
-        	toggle: function() {
-        		if (this.isActive) {
-        			this.isActive = false;
-        		} else
-        		this.isActive = true;
-        	}
-        }
-    })
-    </script>
+    <script src="assets/js/sidebar.js"></script>
 </body>
 
 </html>

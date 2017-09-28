@@ -10,14 +10,27 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <ul>
-            <li><a href="/"><i class="icon-home"></i>Home</a></li>
-            <li><a href="/data"><i class="icon-stats-dots"></i>數據觀測</a></li>
-            <li><a href="/about.html"><i class="icon-users"></i>關於我們</a></li>
-            <li><a href="https://github.com/oxygen-TW/Weather-Station"><i class="icon-github"></i>Github</a></li>
-        </ul>
-    </nav>
+    <nav class="sidebar">
+            <div class="float">
+                <span :class="{ active: isActive, open: true }" v-on:click="toggle">
+                <i class="icon-menu5"></i>
+            </span>
+            </div>
+            <ul :class="{ active: isActive }">
+                <li><a href=""><i class="icon-home"></i>Home</a></li>
+                <li><a href="data"><i class="icon-stats-dots"></i>數據觀測</a></li>
+                <li><a href="about.html"><i class="icon-users"></i>關於我們</a></li>
+                <li><a href="https://github.com/oxygen-TW/Weather-Station"><i class="icon-github"></i>Github</a></li>
+            </ul>
+        </nav>
+        <nav class="nav">
+            <ul>
+                <li><a href=""><i class="icon-home"></i>Home</a></li>
+                <li><a href="data"><i class="icon-stats-dots"></i>數據觀測</a></li>
+                <li><a href="about.html"><i class="icon-users"></i>關於我們</a></li>
+                <li><a href="https://github.com/oxygen-TW/Weather-Station"><i class="icon-github"></i>Github</a></li>
+            </ul>
+        </nav>
     <header class="header" style="background-image: url(https://unsplash.it/1583/315?random&element=DIV);">
         <div class="overlay">
             <div class="container">
@@ -111,6 +124,8 @@
             <p>Copyright &#169; 2016-2017 Weather Service Project All rights reserved.</p>
         </div>
     </footer>
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/sidebar.js"></script>
 </body>
 
 </html>
