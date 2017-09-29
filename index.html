@@ -12,7 +12,7 @@
 <body>
     <header class="index" style="background-image: linear-gradient(to top, rgba(46, 49, 65, 0.6), rgba(46, 49, 65, 0.6)), url(https://unsplash.com/photos/n5wwck8ES4w/download?force=true);">
         <nav class="sidebar">
-            <div class="mask" :class="{ active: isActive }"></div>
+            <div class="mask" v-on:click="toggle" :class="{ active: isActive }"></div>
             <div class="float">
                 <span :class="{ active: isActive, open: true }" v-on:click="toggle">
         		<i class="icon-menu5"></i>

@@ -1,5 +1,5 @@
 var toggle = new Vue({
-        el: ".sidebar",
+        el: "header",
         delimiters: ['${', '}'],
         data: {
             isActive: false
