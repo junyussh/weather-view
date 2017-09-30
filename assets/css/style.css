@@ -1870,6 +1870,9 @@ body {
   color: rgba(38, 50, 56, 0.88);
   font-size: 18px;
   color: #616161; }
+  @media (max-width: 980px) {
+    body {
+      font-size: 10pt; } }
 
 ul {
   margin: 0 auto; }
