@@ -42,6 +42,35 @@
             <a href="#one"></a>
         </div>
     </header>
+    <!-- template for the modal component -->
+    <script type="text/x-template" id="modal-template">
+        <transition name="modal">
+            <div class="modal-mask">
+                <div class="modal-wrapper">
+                    <div class="modal-container">
+                        <div class="modal-header">
+                            <slot name="header">
+                                default header
+                            </slot>
+                        </div>
+                        <div class="modal-body">
+                            <slot name="body">
+                                default body
+                            </slot>
+                        </div>
+                        <div class="modal-footer">
+                            <slot name="footer">
+                                default footer
+                                <button class="modal-default-button" @click="$emit('close')">
+                                    OK
+                                </button>
+                            </slot>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </script>
     <div class="station-list">
         <div class="container">
             <template v-for="weather in items">
@@ -76,141 +105,12 @@
                     </div>
                 </div>
             </template>
-            <!--
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">內湖高中</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-windy2"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">8</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-droplet"></i><span class="humidity">76%</span>
-                        </div>
-                        <div class="uv">
-                            <span class="value"></span>
-                        </div>
-                        <div class="light">
-                            <span class="value"></span>
-                        </div>
-                        <div class="rainfall"><span class="value"></span></div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-cloudy"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">23</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">48%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-windy2"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">8</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">76%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-sun"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">8</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">76%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">23</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-windy2"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">8</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">76%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="weather">
-                    <div class="station">N/A</div>
-                    <div class="tempature">
-                        <span class="value">31</span>
-                        <i class="icon-Celsius"></i>
-                        <i class="large icon-sun"></i>
-                    </div>
-                    <div class="status">
-                        <div class="wind">
-                            <i class="icon-wind"></i><span class="value">14</span><span> km/h</span>
-                        </div>
-                        <div class="humidity">
-                            <i class="icon-rainy2"></i><span class="humidity">10%</span>
-                        </div>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-flat">Full Report</a>
-                    </div>
-                </div>
-            </div>
-            -->
+            <modal v-if="showModal" @close="showModal = false">
+                <!--
+      you can use custom content here to overwrite
+      default content
+    -->
+            </modal>
         </div>
     </div>
     <footer>

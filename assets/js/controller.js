@@ -3,8 +3,9 @@ var apiurl = [{
     url: "http://203.72.63.54:5000/api"
 }];
 Vue.component('modal', {
-  template: require('./modal.vue')
+  template: '#modal-template'
 })
+
 var cards = new Vue({
     el: '.station-list',
     data: {
@@ -41,8 +42,7 @@ var cards = new Vue({
                     return data = e;
                 }
             });
-            this.showModal == true;
-            alert(data.temperature);
+            this.showModal = true;
         }
     }
 })
